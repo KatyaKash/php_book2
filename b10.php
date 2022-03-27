@@ -112,11 +112,6 @@ if (isset($_POST['day'])&&isset($_POST['month'])&&isset($_POST['year'])){
 	</form>
 	<div><?php if (isset($_POST['day'])&&isset($_POST['month'])&&isset($_POST['year']))
 			{
-				$date = strtotime($_POST['day'].'.'.$_POST['month'].'.'.$_POST['year']);
-				$days = [
-			    'Воскресенье', 'Понедельник', 'Вторник', 'Среда',
-			    'Четверг', 'Пятница', 'Суббота'
-				];
 				echo $days[date("w", $date)];
 			}
 			?>
